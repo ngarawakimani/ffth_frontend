@@ -14,7 +14,7 @@ export class AuthService {
   // store the URL so we can redirect after logging in
   redirectUrl: string;
 
-  apiUrl = 'http://localhost:8000/api/v1';
+  apiUrl = 'http://ffthapi.ngara.co.ke/public/api/v1';
   isLoggedIn = false;
   private currentUserSubject: BehaviorSubject<User>;
   public currentUser: Observable<User>;

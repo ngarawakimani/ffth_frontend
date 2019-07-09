@@ -6,7 +6,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class StatsService {
 
-  uri = 'http://localhost:8000/api/v1/stats';
+  uri = 'http://ffthapi.ngara.co.ke/public/api/v1/stats';
 
   constructor(private http: HttpClient) {
   }

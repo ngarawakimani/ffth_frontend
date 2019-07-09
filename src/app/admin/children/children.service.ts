@@ -6,7 +6,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class ChildrenService {
 
-  uri = 'http://localhost:8000/api/v1/children';
+  uri = 'http://ffthapi.ngara.co.ke/public/api/v1/children';
 
   constructor(private http: HttpClient) {
   }
