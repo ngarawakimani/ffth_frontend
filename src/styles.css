@@ -25,6 +25,14 @@ a:focus {
     transition: all 0.3s;
 }
 
+.color-primary{
+    color: #AEBC37!important;
+}
+
+.bg-primary{
+    background: #AEBC37!important;
+}
+
 .navbar {
     padding: 15px 10px;
     background: #fff;
@@ -295,4 +303,27 @@ a.article:hover {
   border: 1px solid #fff;
   border-radius: 0px;
   color: #fff;
+}
+
+.modal-content {
+    border-radius: 0px;
+}
+
+.form-group input{
+    border-radius: 0px;
+}
+
+.form-group .btnSubmit {
+    font-weight: 600;
+    color: #fff;
+    background-color: #AEBC37;
+}
+
+.btnaddChildForm{
+  width: auto;
+  padding: 10px 30px;
+}
+
+.logout{
+    cursor: pointer;
 }

@@ -10,9 +10,9 @@ import Stats from '../Stats';
 })
 export class AdminComponent implements OnInit {
 
-  private token: string;
-  private stats: Stats[];
-  private adminName: string;
+  public token: string;
+  public stats: any;
+  public adminName: string;
 
   constructor(public authService: AuthService,public statsService: StatsService) {
 
@@ -26,7 +26,7 @@ export class AdminComponent implements OnInit {
 
   ngOnInit() {
     this.statsService.getStats(this.token)
-      .subscribe((data: Stats[]) => {
+      .subscribe((data: any) => {
         this.stats = data;
     });
 }

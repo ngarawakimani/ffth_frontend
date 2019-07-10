@@ -3,7 +3,14 @@ import { Injectable } from '@angular/core';
 import { Observable, of, BehaviorSubject } from 'rxjs';
 import { tap, delay, map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
-
+import {
+  CanActivate, Router,
+  ActivatedRouteSnapshot,
+  RouterStateSnapshot,
+  CanActivateChild,
+  NavigationExtras,
+  CanLoad, Route
+} from '@angular/router';
 import { User } from './user';
 
 @Injectable({
@@ -19,7 +26,7 @@ export class AuthService {
   private currentUserSubject: BehaviorSubject<User>;
   public currentUser: Observable<User>;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router) {
       this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
       this.currentUser = this.currentUserSubject.asObservable();
   }
@@ -46,16 +53,8 @@ export class AuthService {
       // remove user from local storage to log user out
       localStorage.removeItem('currentUser');
       this.currentUserSubject.next(null);
+      this.isLoggedIn = false;
+      this.router.navigate(['/login']);
   }
 
-  // login(): Observable<boolean> {
-  //   return of(true).pipe(
-  //     delay(1000),
-  //     tap(val => this.isLoggedIn = true)
-  //   );
-  // }
-
-  // logout(): void {
-  //   this.isLoggedIn = false;
-  // }
 }

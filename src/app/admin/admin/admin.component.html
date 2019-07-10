@@ -39,7 +39,7 @@
         <div class="avatar text-center my-5">
           <img src="../assets/avatar.jpg" class="img-circle"/>
           <p class="text-white mt-4">{{adminName}}</p>
-          <a class="bg-transparent" (click)="logout()" ><i class="fa fa-lock mr-1" ></i>Log Out</a>
+          <a class="bg-transparent logout" (click)="logout()" ><i class="fa fa-lock mr-1" ></i>Log Out</a>
         </div>
 
         <ul class="list-unstyled components">
@@ -50,10 +50,10 @@
                 <a routerLink="/admin/children" routerLinkActive="active"><i class="fa fa-child mr-3" ></i>Children</a>
             </li>
             <li>
-                <a href="#pageSubmenu"><i class="fa fa-hand-holding-usd mr-3" ></i>Sponsorship</a>
+                <a routerLink="/admin/sponsorship" routerLinkActive="active"><i class="fa fa-hand-holding-usd mr-3" ></i>Sponsorship</a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-hand-holding mr-3" ></i>Crisis Fund</a>
+                <a routerLink="/admin/crisis" routerLinkActive="active"><i class="fa fa-hand-holding mr-3" ></i>Crisis Fund</a>
             </li>
         </ul>
     </nav>
@@ -97,7 +97,7 @@
                 </div>
               </div>
             </a>
-            <a class="card" routerLink="/sponsorship">
+            <a class="card" routerLink="/admin/sponsorship">
               <div class="card-body">
                 <div class="media">
                   <i class="fa fa-hand-holding-usd mr-3"></i>
@@ -108,7 +108,7 @@
                 </div>
               </div>
             </a>
-            <a class="card" routerLink="/crisis">
+            <a class="card" routerLink="/admin/crisis">
               <div class="card-body">
                 <div class="media">
                   <i class="fa fa-hand-holding mr-3"></i>
@@ -123,7 +123,7 @@
 
         </div>
 
-        <div class="main-content my-5">
+        <div class="col-md-12 main-content my-5">
 
             <router-outlet></router-outlet>
 

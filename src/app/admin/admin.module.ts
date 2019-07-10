@@ -11,12 +11,15 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { ChildrenComponent } from './children/children.component';
 import { SponsorshipComponent } from './sponsorship/sponsorship.component';
 import { CrisisComponent } from './crisis/crisis.component';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     AdminRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   declarations: [
     AdminComponent,
